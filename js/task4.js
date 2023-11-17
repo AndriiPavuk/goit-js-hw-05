@@ -93,6 +93,9 @@
 // console.log(gettotalbalancebygender(allusers, "male")); // 12053
 // console.log(gettotalbalancebygender(allusers, "female")); // 8863
 
+
+
+
 const getTotalBalanceByGender = (users, gender) => {
     return users.filter(user => user.gender === gender)
                 .reduce((acc, user) => acc + user.balance,  0);
