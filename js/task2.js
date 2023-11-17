@@ -1,23 +1,41 @@
-class Storage {
-  #items;
+// class Storage {
+//   #items;
 
-  constructor(initialItems) {
-    this.#items = initialItems;
+//   constructor(initialItems) {
+//     this.#items = initialItems;
+//   }
+
+//   getItems() {
+//     return this.#items;
+//   }
+
+//   addItem(newItem) {
+//     this.#items.push(newItem);
+//   }
+
+//   removeItem(itemToRemove) {
+//     const indexToRemove = this.#items.indexOf(itemToRemove);
+//     if (indexToRemove !== -1) {
+//       this.#items.splice(indexToRemove, 1);
+//     }
+//   }
+// }
+
+class storage {
+  constructor(items) {
+    this.items = items;
   }
 
-  getItems() {
-    return this.#items;
+  getitems() {
+    return this.items;
   }
 
-  addItem(newItem) {
-    this.#items.push(newItem);
+  additem(newitem) {
+    this.items.push(newitem);
   }
 
-  removeItem(itemToRemove) {
-    const indexToRemove = this.#items.indexOf(itemToRemove);
-    if (indexToRemove !== -1) {
-      this.#items.splice(indexToRemove, 1);
-    }
+  removeitem(itemtoremove) {
+    this.items = this.items.filter(item => item !== itemtoremove);
   }
 }
 
